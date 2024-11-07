@@ -1,3 +1,38 @@
+"""
+This module implements a voting system simulation with two different voting methods:
+Ranked Choice Voting and Social Network Voting. It also compares the results of these
+two methods based on cardinal and ordinal utility.
+
+Functions:
+    create_voting(voters, candidates):
+        Initializes the voting simulation with a given number of voters and candidates.
+    print_connections(names, c, voters, candidates):
+        Prints the connections between voters.
+    print_rankings(names, r, voters, candidates, ordered):
+        Prints the rankings of candidates for each voter.
+    start_voting(names, connections, voters, candidates, candidateRanking, ordered):
+        Starts the voting process and prints the results of both voting methods.
+    eleminate_candidates(names, voters, candidates, ordered):
+        Performs the Ranked Choice Voting method and returns the winner.
+    social_network_voting(names, connections, voters, candidates, ordered):
+        Performs the Social Network Voting method and returns the winner.
+    social_welware(winner, voters, candidateRanking, candidates, ordered):
+        Calculates and prints the cardinal and ordinal utility of the winner.
+    cardinal_utility(winner, candidates, voters, candidateRanking, ordered):
+        Calculates the cardinal utility of the winner.
+    ordinal_utility(winner, voters, ordered):
+        Calculates the ordinal utility of the winner.
+Constants:
+    CAND: Subscript of list which represents the candidate.
+    SCORE: Subscript of list which represents the score of the candidate.
+    PLACE: Subscript of list which represents the ranking, lowest is best.
+Usage:
+    Run the module as a script to execute the voting simulation with predefined parameters.
+    
+Author: Anthony Wilson
+Date: 3/24/24
+"""
+
 from collections import Counter
 import copy
 import numpy as np
